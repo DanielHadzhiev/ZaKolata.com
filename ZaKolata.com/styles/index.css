@@ -1,0 +1,10 @@
+body{
+  background-color: rgb(29, 27, 27);
+}
+.header{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.main-container{
+  margin-top: 15%;
+  color: white;
+}
