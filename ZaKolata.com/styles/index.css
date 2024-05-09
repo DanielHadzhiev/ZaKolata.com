@@ -1,10 +1,90 @@
-body{
-  background-color: rgb(29, 27, 27);
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.header{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+body {
+    background-color: rgb(29, 27, 27);
 }
-.main-container{
-  margin-top: 15%;
-  color: white;
+
+.header {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.main-container {
+    margin-top: 15%;
+    color: white;
+}
+
+.welcome-screen {
+    position: relative;
+    /* Essential for positioning the pseudo-element */
+    height: 80%;
+    z-index: 1;
+}
+
+.welcome-screen::before {
+    content: "";
+    /* Necessary for the pseudo-element to work */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('/ZaKolata.com/imgs/car-interior.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity: 0.5;
+    /* Set the opacity level you want (0 to 1) */
+    z-index: -1;
+    /* Places the background behind the content */
+}
+
+.welcome-info {
+    position: absolute;
+    top: 40%;
+    width: 20%;
+    left: 23%;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.447);
+    opacity: 1;
+    color: rgb(161, 2, 210);
+    text-align: center;
+}
+
+.top-products h1 {
+    color: white;
+    margin: 0;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.carousel-inner {
+    display: flex;
+    align-self: center;
+}
+
+.carousel-item .d-flex {
+    width: 100%;
+    align-items: center;
+    /* Center the cards vertically */
+}
+
+.carousel-item .card {
+    flex: 0 0 auto;
+    /* Prevent cards from stretching */
+}
+
+@media (max-width: 768px) {
+    .carousel-item .card {
+        width: 100%;
+        /* Full width on smaller screens */
+        margin-right: 0;
+        /* Remove margin if necessary */
+    }
 }
