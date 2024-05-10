@@ -13,6 +13,10 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.logo-nav {
+    height: 56px;
+}
+
 .main-container {
     margin-top: 15%;
     color: white;
@@ -33,7 +37,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('/ZaKolata.com/imgs/car-interior.jpg') no-repeat center center fixed;
+    background: url('/ZaKolata.com/imgs/welcome-bg.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -46,9 +50,9 @@ body {
 
 .welcome-info {
     position: absolute;
-    top: 40%;
+    top: 45%;
     width: 20%;
-    left: 23%;
+    left: 40%;
     border-radius: 10px;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.447);
@@ -64,9 +68,25 @@ body {
     margin-top: 25px;
 }
 
+.product-list {
+    margin-top: 20px;
+}
+
 .carousel-inner {
     display: flex;
     align-self: center;
+}
+
+.active {
+    display: flex;
+}
+
+.carousel-item {
+    margin-left: 15%;
+}
+
+.d-flex {
+    gap: 10px;
 }
 
 .carousel-item .d-flex {
@@ -78,6 +98,117 @@ body {
 .carousel-item .card {
     flex: 0 0 auto;
     /* Prevent cards from stretching */
+}
+
+.gradient-text {
+    font-weight: bold;
+    /* Makes the gradient more visible */
+    background: -webkit-linear-gradient(left, #ff07fb, #007dee);
+    /* Gradient from red to blue */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.about-us {
+    color: white;
+}
+
+.about-us h1 {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.about-us-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+
+.left-side {
+    max-width: 35%;
+    background: -webkit-linear-gradient(left, #be06bb57, #0161b557);
+    padding-left: 10px;
+}
+
+.right-side {
+    max-width: 35%;
+    background: -webkit-linear-gradient(left, #be06bb57, #0161b557);
+    padding-left: 10px;
+}
+
+.left-side h3 {
+    text-align: center;
+    padding-top: 15px;
+    margin-bottom: 15px;
+}
+
+.left-side p {
+    text-decoration: none;
+}
+
+.about-img {
+    height: 400px;
+}
+
+footer {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer h2 {
+    margin: 0;
+    text-align: center;
+    margin-top: 160px;
+    color: white;
+}
+
+.f-img {
+    height: 75px;
+}
+
+.footer-info {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.vr-f {
+    color: white;
+}
+
+.footer-info a {
+    font-size: 255%;
+    text-decoration: none;
+    color: white;
+    transition: color 0.5s linear;
+}
+
+.footer-info a:hover {
+    background: -webkit-linear-gradient(left, #ff07fb, #007dee);
+    /* Gradient from red to blue */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+footer p {
+    color: rgb(106, 106, 106);
+    margin: 0;
+    text-align: center;
 }
 
 @media (max-width: 768px) {
