@@ -1,15 +1,17 @@
 <template>
-  <h1>{{ message }}</h1>
-</template>
-
-<script>
-export default {
-  data() {
-    return {
-      message: 'This is some text'
-    };
-  }
-};
+    <main>
+        <router-view></router-view> <!-- Where routed views are rendered -->
+      </main>
+</template> 
+  
+  <script>
+  export default {
+   
+  };
 </script>
-
+  
 <style></style>
+  
+<script setup>
+</script>
+  
