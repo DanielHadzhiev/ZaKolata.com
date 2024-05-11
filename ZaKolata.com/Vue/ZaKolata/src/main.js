@@ -1,6 +1,6 @@
-import Home from './Home.vue'
-import Products from './Products.vue'
-import ProductInfo from './ProductInfo.vue'
+import Home from './views/Home.vue'
+import Products from './views/Products.vue'
+import ProductInfo from './views/ProductInfo.vue'
 
 import { createApp } from 'vue';
 import App from './App.vue';

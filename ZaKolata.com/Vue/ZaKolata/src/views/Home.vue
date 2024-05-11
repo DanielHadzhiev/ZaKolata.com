@@ -1,5 +1,14 @@
 <template>
   <LoginForm v-if="showLogin"></LoginForm>
+  <section class="welcome-screen">
+    
+  </section>
+  <section class="top-products">
+
+  </section>
+  <section class="about-us">
+
+  </section>
 </template> 
 
 <script>
@@ -34,5 +43,5 @@ export default {
 <style></style>
 
 <script setup>
-import LoginForm from './components/LoginForm.vue'
+import LoginForm from '@/components/LoginForm.vue'
 </script>

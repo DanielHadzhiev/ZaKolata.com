@@ -1,5 +1,5 @@
 <template>
-    <div id="loginForm" >
+    <div id="loginForm" v-if="showLogin">
         <form @submit.prevent="submitForm" class="form">
             <div class="login-text">
                 <h2>Login</h2>
@@ -20,6 +20,7 @@
 
 <script>
     import logoImg from '@/assets/imgs/logo.png'; // '@' is an alias to /src in Vue CLI
+    import { EventBus } from '@/event-bus.js';
 
     export default {
         data() {
@@ -28,10 +29,17 @@
                     username: "",
                     password: "",
                 },
-                logo: logoImg
+                logo: logoImg,
+                showLogin: false,
             }
         },
+        created() {
+            EventBus.$on('user-func-showLogin', this.theMethod);
+        },
         methods: {
+            showLogin() {
+                this.showLogin = true
+            },
             submitForm() {
                 console.log('Form submitted with:', this.cr);
                 // Add your login logic here
