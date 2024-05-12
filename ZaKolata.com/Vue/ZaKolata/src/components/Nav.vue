@@ -3,7 +3,7 @@
         <img :src="logo" alt="">
         <div class="btns" v-if="!isLogin">
             <a href="" @click.prevent="showLogin">Login</a>
-            <a href="">Register</a>
+            <a href="" @click.prevent="showRegister">Register</a>
         </div>
     </nav>
 </template>
@@ -11,6 +11,7 @@
 
 <script>
     import logoImg from '@/assets/imgs/logo.png'; // '@' is an alias to /src in Vue CLI
+    import { EventBus } from '@/event-bus.js';
 
     export default {
         props: ['isLogin'],
@@ -22,6 +23,9 @@
         methods: {
             showLogin() {
                 EventBus.emit('user-func-showLogin');
+            },
+            showRegister() {
+                EventBus.emit('user-func-showRegister');
             }
         }
     }

@@ -1,5 +1,4 @@
 <template>
-  <LoginForm v-if="showLogin"></LoginForm>
   <section class="welcome-screen">
     
   </section>

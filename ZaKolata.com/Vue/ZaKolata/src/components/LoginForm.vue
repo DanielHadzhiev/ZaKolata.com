@@ -1,5 +1,5 @@
 <template>
-    <div id="loginForm" v-if="showLogin">
+    <div id="loginForm" v-if="isShowingLogin">
         <form @submit.prevent="submitForm" class="form">
             <div class="login-text">
                 <h2>Login</h2>
@@ -30,15 +30,15 @@
                     password: "",
                 },
                 logo: logoImg,
-                showLogin: false,
+                isShowingLogin: false,
             }
         },
         created() {
-            EventBus.on('user-func-showLogin', this.theMethod);
+            EventBus.on('user-func-showLogin', this.showLogin);
         },
         methods: {
             showLogin() {
-                this.showLogin = true
+                this.isShowingLogin = true
             },
             submitForm() {
                 console.log('Form submitted with:', this.cr);
@@ -46,7 +46,7 @@
             }
         },
         unmounted() {
-            EventBus.off('user-func-showLogin', this.theMethod);
+            EventBus.off('user-func-showLogin', this.showLogin);
         }
     }
     
