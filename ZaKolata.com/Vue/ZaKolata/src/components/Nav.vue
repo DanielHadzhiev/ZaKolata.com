@@ -21,7 +21,7 @@
         },
         methods: {
             showLogin() {
-                EventBus.$emit('user-func-showLogin');
+                EventBus.emit('user-func-showLogin');
             }
         }
     }

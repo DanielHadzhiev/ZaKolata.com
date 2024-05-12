@@ -3,10 +3,13 @@
       <Nav :isLogin="isLogin"></Nav>
       <router-view></router-view> <!-- Where routed views are rendered -->
     </main>
+    <Footer></Footer>
+
 </template> 
 
 <script>
   import Nav from './components/Nav.vue'
+  import Footer from './components/Footer.vue'
 
   export default {
    components: {

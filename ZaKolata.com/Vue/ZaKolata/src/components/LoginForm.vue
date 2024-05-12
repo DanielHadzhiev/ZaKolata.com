@@ -34,7 +34,7 @@
             }
         },
         created() {
-            EventBus.$on('user-func-showLogin', this.theMethod);
+            EventBus.on('user-func-showLogin', this.theMethod);
         },
         methods: {
             showLogin() {
@@ -44,6 +44,9 @@
                 console.log('Form submitted with:', this.cr);
                 // Add your login logic here
             }
+        },
+        unmounted() {
+            EventBus.off('user-func-showLogin', this.theMethod);
         }
     }
     

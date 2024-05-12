@@ -1,3 +1,3 @@
-// src/event-bus.js
-import Vue from 'vue';
-export const EventBus = new Vue();
+// event-bus.js
+import mitt from 'mitt';
+export const EventBus = mitt();
